@@ -1,0 +1,208 @@
+body{
+      font-family: sans-serif;
+	  font-weight:bold;
+	  background: url('https://i.pinimg.com/736x/c5/11/af/c511af544effb2210f6bcdf3d25f4399.jpg');
+	  background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 2em;
+	  caret-color: transparent;
+    }
+	
+	
+	.navbar {
+		background-color: purple;   
+		height: 45px;
+		width: 45px;
+        align-items: center;
+}
+
+
+.home {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8em;
+}
+	
+	
+    .quiz-box{
+      background: #aa98b5;
+	  padding: 2em;
+	  border-radius: 10px;
+	  max-width: 600px;
+	  margin: 0 auto;
+	  box-shadow: 0px 0px 20px white;
+}
+	
+	.next-button {
+  display: none;
+  margin-top: 1em;
+  padding: 0.7em 1.5em;
+  background-color: #6a4caf;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.next-button:hover {
+  background-color: #4e329e;
+  border-color: white;
+}
+
+
+input#q1c:checked ~ label.next-button.q1,
+input#q2a:checked ~ label.next-button.q2,
+input#q3a:checked ~ label.next-button.q3,
+input#q4b:checked ~ label.next-button.q4,
+input#q5b:checked ~ label.next-button.q5,
+input#q6c:checked ~ label.next-button.q6,
+input#q7a:checked ~ label.next-button.q7,
+input#q8a:checked ~ label.next-button.q8,
+input#q9c:checked ~ label.next-button.q9,
+input#q10b:checked ~ label.next-button.q10,
+input#q11b:checked ~ label.next-button.q11,
+input#q12a:checked ~ label.next-button.q12,
+input#q13c:checked ~ label.next-button.q13,
+input#q14c:checked ~ label.next-button.q14,
+input#q15c:checked ~ label.next-button.q15{
+	display: inline-block; 
+	}
+
+
+    input[type="radio"]{
+      display: none;
+    }
+
+    .question{
+      display: none;
+      margin-top: 2em;
+    }
+
+    #step1:checked ~ .quiz-box .question1, 
+    #step2:checked ~ .quiz-box .question2, 
+    #step3:checked ~ .quiz-box .question3,
+	#step4:checked ~ .quiz-box .question4,
+    #step5:checked ~ .quiz-box .question5,	
+	#step6:checked ~ .quiz-box .question6,
+	#step7:checked ~ .quiz-box .question7, 
+    #step8:checked ~ .quiz-box .question8,
+	#step9:checked ~ .quiz-box .question9,
+    #step10:checked ~ .quiz-box .question10,	
+	#step11:checked ~ .quiz-box .question11,
+	#step12:checked ~ .quiz-box .question12, 
+    #step13:checked ~ .quiz-box .question13,
+	#step14:checked ~ .quiz-box .question14,
+	#step15:checked ~ .quiz-box .question15{
+     display: block;
+}
+
+    label.answer{
+      display: block;
+      background: #57356a	;
+      color: white;
+      padding: 1em;
+      margin: 1em auto;
+      width: 250px;
+      border-radius: 5px;
+      cursor: pointer;
+	  transition: background-color 0.3s, transform 0.2s;
+    }
+	
+	
+    label.answer:hover{
+      background-color: #6f3f85;
+      transform: scale(1.05);
+}
+
+    input.correct:checked + label {
+      background: green;
+    }
+    input.correct:checked ~ #step1:checked ~ .question1,
+    input.correct:checked ~ #step2:checked ~ .question2,
+    input.correct:checked ~ #step3:checked ~ .question3,
+	input.correct:checked ~ #step4:checked ~ .question4,
+    input.correct:checked ~ #step5:checked ~ .question5,	
+	input.correct:checked ~ #step6:checked ~ .question6,
+	input.correct:checked ~ #step7:checked ~ .question7,
+    input.correct:checked ~ #step8:checked ~ .question8,
+    input.correct:checked ~ #step9:checked ~ .question9,
+	input.correct:checked ~ #step10:checked ~ .question10,
+    input.correct:checked ~ #step11:checked ~ .question11,
+    input.correct:checked ~ #step12:checked ~ .question12,
+    input.correct:checked ~ #step13:checked ~ .question13,
+	input.correct:checked ~ #step14:checked ~ .question14,
+    input.correct:checked ~ #step15:checked ~ .question15{
+      display: block;
+    }
+	
+    .question1:not(:has(input.restart:checked))	~ .question1,
+    .question2:not(:has(input.correct:checked)) ~ .question2,
+    .question3:not(:has(input.correct:checked)) ~ .question3,
+    .question4:not(:has(input.correct:checked)) ~ .question4,	
+	.question5:not(:has(input.correct:checked)) ~ .question5,	
+	.question6:not(:has(input.correct:checked)) ~ .question6,
+	.question7:not(:has(input.correct:checked))	~ .question7,
+    .question8:not(:has(input.correct:checked)) ~ .question8,
+    .question9:not(:has(input.correct:checked)) ~ .question9,
+    .question10:not(:has(input.correct:checked)) ~ .question10,	
+	.question11:not(:has(input.correct:checked)) ~ .question11,
+    .question12:not(:has(input.correct:checked)) ~ .question12,
+    .question13:not(:has(input.correct:checked)) ~ .question13,
+    .question14:not(:has(input.correct:checked)) ~ .question14,	
+	.question15:not(:has(input.correct:checked)) ~ .question15{
+      display: none;
+    }
+
+    .restart-button{
+      margin-top: 1em;
+      display: inline-block;
+      background: #e74c3c;
+      color: white;
+      padding: 1em 2em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+	
+	
+	.pic1,
+    .pic2,
+    .pic3,
+    .pic4,
+    .pic5,
+    .pic6,
+	.pic7,
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic12,
+    .pic13,
+    .pic14,
+    .pic15{
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px white;
+	}
+	
+	.pic1:hover,
+	.pic2:hover,
+    .pic3:hover,
+    .pic4:hover,
+    .pic5:hover,	
+	.pic6:hover,
+	.pic7:hover,
+	.pic8:hover,
+    .pic9:hover,
+    .pic10:hover,
+    .pic11:hover,
+	.pic12:hover,
+    .pic13:hover,
+    .pic14:hover,
+    .pic15:hover{
+	    transform: scale(1.1);
+	    transition: transform 0.3s;
+	}
